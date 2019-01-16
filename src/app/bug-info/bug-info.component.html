@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label>Date</label>
+      <input
+            name="bug_found_date" 
+            type="text"
+            class="form-control"
+            [minDate]="minDate"
+            [maxDate]="maxDate"
+            #dp="bsDatepicker"
+            bsDatepicker 
+            [(ngModel)]="bug_found_date">
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <label>Time</label>
+      <timepicker 
+        name = "bug_found_time" 
+        [(ngModel)]="bug_found_time"></timepicker>
+        <pre class="alert alert-info">Time is: {{bug_found_time}}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label>Impact</label>
+  <select name="impact" id="impact" class="form-control input-lg" [(ngModel)]="impact">
+    <option value="">Impact</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+</div>
+<div class="form-group">
+  <label>Detailed Explanation of Bug</label>
+  <textarea name="details" id="details" class="form-control input-lg" [(ngModel)]="details"></textarea>
+</div>
